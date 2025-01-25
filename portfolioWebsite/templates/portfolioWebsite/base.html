@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Larry</title>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'portfolioWebsite/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+         <div class="wrapper">
+        <header>
+            <div class="navbar navbar-expand-lg">
+                <div class="left-nav">
+                    <img class="logo-image" src="{% static 'portfolioWebsite/images/Larry.jpg' %}">
+                    <h4 class="logo">Larry Bush</h4>
+                </div>
+
+                <!-- Toggle Button (Hamburger) for small screens -->
+                <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars navbar-toggler-icon"></i>
+                </div>
+
+                <!-- Nav links that will collapse on small screens -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="right-nav ms-auto">
+                        <a href="#target-section" class="nav-links">Project</a>
+                        <a href="{% static 'portfolioWebsite/documents/LB Resume_Linkedin.pdf' %}" class="nav-links" target="_blank">Resume</a>
+                        <a href="{% static 'portfolioWebsite/documents/LB Cover Letter (2).pdf' %}" class="nav-links" target="_blank">Cover Letter</a>
+                        <a href="https://www.linkedin.com/in/larry-bush/" class="nav-links" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                        <a href="https://github.com/Larry4523" class="nav-links" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="content">
+                     <h5 class="mb-5 mt-5"><span>Hello! I'm Larry Bush</span></h5>
+                <p>I’m a passionate and driven web developer with a solid foundation in HTML, CSS, JavaScript,
+                    Django, and SQL. I thrive in fast-paced environments and am eager to apply my skills to create clean,
+                    efficient, and user-friendly websites. Whether it's crafting a responsive front end or building robust
+                    back-end functionality, I am committed to delivering high-quality work and continuously improving my craft.</p>
+                <p>I’m currently seeking an entry-level web development position where I can contribute my knowledge of
+                    web technologies while growing professionally and learning from experienced developers.</p>
+                <h5>Skills</h5>
+                    <img class="img-fluid" src="{% static "portfolioWebsite/images/skills.png" %}">
+
+                </div>
+
+            </div>
+            <div class="col-2">
+                <img style="width: 100%; height: 100%; object-fit: cover;" src="{% static "portfolioWebsite/images/image_portfolio.jpg" %}">
+            </div>
+        </div>
+        <div id="target-section" class="row-2">
+            <div class="col-md-8">
+                <div class="content">
+                    <h5  class="mb-5 mt-5"><span>Boston Terrier Talk</span><br><span>Web App Project</span></h5>
+                    <h6><b>Key Features</b></h6>
+                <ul>
+                    <li>
+                        <b>Post Creation:</b> Users can create posts that include text, images, and video. This gives users the ability to share different forms of content.
+                    </li>
+                    <li>
+                       <b>Likes & Comments:</b>  Users can interact with posts by liking them or leaving comments, fostering engagement and interaction within the community.
+                    </li>
+                    <li>
+                        <b>User Following & Blocking:</b> Users have control over who they interact with. They can follow other users to keep up with their content and block users they don't want to interact with.
+                    </li>
+                    <li>
+                        <b>Privacy Settings:</b> I've added an important privacy feature, allowing users to restrict their posts to only be visible to friends. This helps users control who sees their content and protects privacy.
+                    </li>
+                    <li>
+                        <a href="https://bostonterriertalk-hvejhzhecwd7b8ce.centralus-01.azurewebsites.net/login/?next=/" target="_blank">View Project</a>
+                    </li>
+                </ul>
+                    <h6><b>Technologies Used</b></h6>
+                <ul>
+                    <li>HTML5 & CSS3 for creating structured, responsive layouts.</li>
+                    <li>JavaScript for dynamic and interactive web experiences.</li>
+                    <li>Django for building secure and scalable web applications.</li>
+                    <li>I deployed this project using Azure, I create a Static Web App in the Azure portal,
+                        link it to my GitHub repository where the website code is stored, and Azure automatically handles deployment.
+                        Whenever I push updates to the repository, Azure updates the site. I can also configure a custom domain for
+                        a personalized URL. It's a seamless way to host and update a static site with minimal effort.</li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-logo">
+                <a href="https://bostonterriertalk-hvejhzhecwd7b8ce.centralus-01.azurewebsites.net/" target="_blank"><img class="img-fluid" src="{% static "portfolioWebsite/images/logo.png" %}"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static "js/drag.js" %}"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart/dist/index.min.js"></script>
+</body>
+</html>
