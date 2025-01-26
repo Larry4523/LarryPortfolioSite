@@ -20,13 +20,13 @@ jobs:
           submodules: true
           lfs: false
 
-      # Set up Python 3.12
+      # Set up Python 3.12 (You can remove this if it's not needed)
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
-      # Install dependencies
+      # Install dependencies (This step can be omitted since it's not required for static websites)
       - name: Install dependencies
         run: |
           python -m venv .venv
@@ -38,22 +38,22 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_WATER_0CECC1710 }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}  # For PR comments, etc.
           action: "upload"
-          app_location: "/"  # Adjust to your app's source folder (e.g., "src" or "client")
-          api_location: ""   # Adjust if you have an API (e.g., "api")
-          output_location: ""  # Adjust if you have build output directory (e.g., "dist", "build")
+          app_location: "/"           # Your static website files are in the root
+          api_location: ""            # No API
+          output_location: ""         # No build folder, static content is directly in the root
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     name: Close Pull Request Job
     steps:
-      - name: Close Pull Request Deployment
+      - name: Close Pull Request Deployment (optional step for cleanup)
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_WATER_0CECC1710 }}
-          action: "close"
-          app_location: ''  # You can leave this empty as you're just closing the deployment
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "cleanup"
+          app_location: ''
