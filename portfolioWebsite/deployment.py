@@ -39,7 +39,6 @@ STORAGES = {
 AZURE_ACCOUNT_NAME = os.environ['AZURE_ACCOUNT_NAME']  # Your Azure Storage account name
 AZURE_ACCOUNT_KEY = os.environ['AZURE_ACCOUNT_KEY']  # Your Azure Storage account key
 AZURE_CONTAINER = os.environ['AZURE_MEDIA_CONTAINER']  # The container name you created
-AZURE_STATIC_CONTAINER = os.environ['AZURE_STATIC_CONTAINER']  # The container for static files
 
 # Set up the DATABASES configuration using environment variables
 
