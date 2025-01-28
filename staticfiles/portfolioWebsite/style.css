@@ -70,14 +70,20 @@ body {
     gap:200px;
 }
 
+.row-3 {
+    display: flex;
+    background-color: white;
+    justify-items: center;
+    gap:200px;
+}
+
+
+
 .portfolio-img img {
     height: 300px;
     width: 300px;
 }
 
-tr {
-    padding: 20px;
-}
 
 .content-section {
     padding: 10px 20px;
@@ -129,6 +135,7 @@ h5 {
    align-content: center;
     padding-right: 10%;
 }
+
 
 @media (max-width: 768px) {
   .row-2  {
