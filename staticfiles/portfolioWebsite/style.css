@@ -148,6 +148,11 @@ h5 {
     padding-right: 0; /* Adjust padding */
   }
 
+  .row-3 {
+    display: block;
+    gap:20px;
+}
+
 }
 
 
